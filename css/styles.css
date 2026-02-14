@@ -265,7 +265,7 @@ nav a:active {
 	padding-top: 24px;
 	padding-bottom: 24px;
     display: block;
-	transition: 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-list-item {
@@ -292,6 +292,10 @@ nav a:active {
 	transition: transform 0.3s ease;
 	transform: scaleX(0);
   	transform-origin: left;
+}
+
+.nav-list-link.active::after {
+	transform: none;
 }
 
 .nav-list-link:hover::after {
@@ -464,7 +468,7 @@ section.team-block ul.team-list li {
   	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	margin-right: 24px; 
 	box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 section.team-block ul.team-list li:hover {
@@ -473,7 +477,9 @@ section.team-block ul.team-list li:hover {
               0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-
+section.team-block ul.team-list ul.social-wrapper li:hover {
+	box-shadow: none;;
+}
 
 section.team-block ul.social-wrapper li {
 	box-shadow: none;
@@ -503,6 +509,8 @@ section.team-block ul li.team-social-list-item .social-link {
 	display: flex;
     box-shadow: none;
 	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	width: 40px;
+    height: 40px;
 }
 
 section.team-block ul li.team-social-list-item .social-link:hover {
