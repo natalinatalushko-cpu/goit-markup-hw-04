@@ -147,7 +147,7 @@ h3 {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	max-width: 1140px;
+	max-width: 1440px;
 	margin: 0 auto;
 }
 
@@ -186,7 +186,7 @@ button:focus {
 }
 
 .header-container {
-	max-width: 1158px;
+	/* max-width: 1158px; */
 	margin: 0 auto;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -217,6 +217,9 @@ button:focus {
 
 .page-header {
 	border-bottom: 1px solid #E7E9FC;
+	box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+			  0px 1px 1px rgba(46, 47, 66, 0.16),
+			  0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .page-header .container {
@@ -242,12 +245,13 @@ nav a:active {
 .page-nav .nav-list {
 	display: flex;
 	gap: 40px;
+	padding-bottom: 3px;
 }
 
-.page-nav .nav-list  .nav-list-item {
-	/* padding-bottom: 24px; */
+/* .page-nav .nav-list  .nav-list-item {
+	padding-bottom: 24px;
 	padding-top: 24px;
-}
+} */
 
 .page-nav .nav-list a {
 	font-family: 'Roboto', sans-serif;
@@ -257,35 +261,21 @@ nav a:active {
 	line-height: 1.5;
 	letter-spacing: 0.02em;
 	color:#2E2F42;
-	padding: 0;
+	padding-top: 24px;
+	padding-bottom: 24px;
+    display: block;
 }
-
-/* .nav-list-item::after {
-	content: "";
-	display: block;
-	width: 100%;
-	height: 4px;
-	background-color: #404BBF;
-	margin-top: 20px;
-	opacity: 0;
-	border-radius: 2px;
-}
-
-.nav-list-item:hover::after {
-	content: "";
-	display: block;
-	width: 100%;
-	height: 4px;
-	background-color: #404BBF;
-	margin-top: 20px;
-	opacity: 1;
-} */
 
 .nav-list-item {
   position: relative;
 }
 
-.nav-list-item::after {
+.nav-list-link.active {
+	color: ##404bbf;
+}
+
+.nav-list-link::after,
+.nav-list-link.active::after {
   content: "";
   position: absolute;
   left: 0;
@@ -300,7 +290,7 @@ nav a:active {
   transition: transform 0.3s ease;
 }
 
-.nav-list-item:hover::after {
+.nav-list-link:hover::after {
   transform: scaleX(1);
 }
 
@@ -352,13 +342,14 @@ button.hero-button {
 	line-height: 1.5;
 	letter-spacing:  0.04em;
 	background-color: #4D5AE5;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 	cursor: pointer;
-	transition: background-color 0.9s ease;
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	/* transition: background-color 0.9s ease; */
 }
 
 button.hero-button:hover {
 	background-color: #404BBF;
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -460,7 +451,7 @@ section.team-block ul.team-list {
 	display: flex;
 }
 
-section.team-block ul li {
+section.team-block ul.team-list li {
 	background: #FFFFFF;
 	width: 264px;
 	border-radius: 0 0 4px 4px;
@@ -468,6 +459,12 @@ section.team-block ul li {
               0px 1px 1px rgba(46, 47, 66, 0.16),
               0px 2px 1px rgba(46, 47, 66, 0.08);
 	margin-right: 24px; 
+}
+
+section.team-block ul.social-wrapper li {
+	box-shadow: none;
+	width: auto;
+	margin: 0;
 }
 
 section.team-block ul li:last-child {
@@ -485,20 +482,20 @@ section.team-block ul li img {
 	padding-bottom: 32px;
 }
 
-.team-social-list-item {
+section.team-block ul li.team-social-list-item .social-link {
 	background-color: #4D5AE5;
 	padding: 12px;
 	border-radius: 50%;
+	display: flex;
+    box-shadow: none;
 	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-social-list-item:hover {
+section.team-block ul li.team-social-list-item .social-link:hover {
 	background-color: #404BBF;
 }
 
-footer .social-wrapper .team-social-list-item:hover {
-	background-color: #31D0AA;
-}
+
 
 .team-social-list-item svg {
 	fill: #F4F4FD;
@@ -590,8 +587,8 @@ li.portfolio-list-item {
 	transition: transform 250ms ease-in-out
 }
 
-.box:hover .overlay {
-	transform: translatex(0);
+.portfolio-list-item:hover .box .overlay {
+	transform: translateY(0);
 }
 
 .overlay p {
@@ -654,6 +651,19 @@ p.footer-info {
 	color: white;
 	font-family: "Roboto", sans-serif;
 	margin-bottom: 22px;
+}
+
+footer ul.social-wrapper li.team-social-list-item .social-link {
+	background-color: #4D5AE5;
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    box-shadow: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+footer ul.social-wrapper  li.team-social-list-item .social-link:hover {
+	background-color: #31D0AA;
 }
 
 /* end footer */
