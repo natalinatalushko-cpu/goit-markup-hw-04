@@ -247,7 +247,6 @@ nav a:active {
 .page-nav .nav-list {
 	display: flex;
 	gap: 40px;
-	padding-bottom: 3px;
 }
 
 /* .page-nav .nav-list  .nav-list-item {
@@ -282,7 +281,7 @@ nav a:active {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4px;
+  bottom: -1px;
   width: 100%;
   height: 4px;
   background-color: #404BBF;
@@ -290,7 +289,8 @@ nav a:active {
 }
 
 .nav-list-link::after {
-	transition: transform 0.3s ease;
+	/* transition: transform 0.3s ease; */
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	transform: scaleX(0);
   	transform-origin: left;
 }
@@ -695,6 +695,8 @@ footer ul.social-wrapper li.team-social-list-item .social-link {
     display: flex;
     box-shadow: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	width: 40px;
+	height: 40px;
 }
 
 footer ul.social-wrapper  li.team-social-list-item .social-link:hover {
