@@ -290,7 +290,7 @@ nav a:active {
 
 .nav-list-link::after {
 	/* transition: transform 0.3s ease; */
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	transform: scaleX(0);
   	transform-origin: left;
 }
@@ -373,7 +373,7 @@ button.hero-button:hover {
 
 .features-icon-wrapper{
 	display: flex;
-    padding: 24px;
+    /* padding: 24px; */
     margin-bottom: 8px;
     background-color: #F4F4FD;
     border: 1px solid #8e8f99;
@@ -685,18 +685,21 @@ p.footer-info {
 .section-footer-socials .section-footer-socials-title {
 	color: white;
 	font-family: "Roboto", sans-serif;
-	margin-bottom: 22px;
+	margin-bottom: 16px;
 }
 
 footer ul.social-wrapper li.team-social-list-item .social-link {
 	background-color: #4D5AE5;
-    padding: 12px;
+    /* padding: 12px; */
     border-radius: 50%;
     display: flex;
     box-shadow: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	width: 40px;
 	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center	;
 }
 
 footer ul.social-wrapper  li.team-social-list-item .social-link:hover {
